@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:descendantFocusability="beforeDescendants">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/card_background_selector"
+            android:descendantFocusability="afterDescendants"
+            android:backgroundTint="@android:color/darker_gray"
+            android:id="@+id/linearLayout_CardStatusListItem">
+
+        <TextView
+                android:id="@+id/textView_CardStatusOperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Operator"
+                android:textColor="@android:color/black"/>
+
+        <TextView
+                android:id="@+id/textView_CardStatusOperation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Operation"
+                android:textColor="@android:color/black"/>
+
+        <TextView
+                android:id="@+id/textView_CardStatusMachine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Machine"
+                android:textColor="@android:color/black"/>
+
+        <TextView
+                android:id="@+id/textView_CardStatusRejectCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reject Count"
+                android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+</FrameLayout>

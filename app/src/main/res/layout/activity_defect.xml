@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.DefectActivity"
+        tools:openDrawer="end">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/constraintLayout_Main">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:id="@+id/constraintLayout_Details"
+                android:visibility="visible"
+                android:background="@drawable/rounded_corner"
+                android:orientation="horizontal"
+                app:layout_constraintHorizontal_bias="0.0">
+
+            <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tableLayout_Header1"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_corner"
+                    >
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        >
+
+                    <TextView
+                            android:text="MO NO"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_MONoCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_MONo"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottomright_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="IO NO"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_IONoCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_IONo"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottomright_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="PO NO"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_PONoCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_PONo"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottomright_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="CARD STATUS"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_CardDefectStatusCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_CardDefectStatus"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textAlignment="viewStart"
+                            android:background="@drawable/rectange_topbottomright_corner"
+                            android:textSize="13sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            />
+
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tableLayout_Header2"
+                    android:layout_weight="1">
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="COLOR"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_ColorCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_Color"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottomright_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:maxHeight="1sp"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="LAY NO"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_LayNoCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_LayNo"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottomright_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="SIZE"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_SizeCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_Size"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottomright_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="Total Defects"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_TotalDefectsCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_TotalDefects"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottomright_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tableLayout_Header3"
+                    android:layout_weight="1"
+                    android:weightSum="4">
+
+                <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="match_parent">
+
+                    <TextView
+                            android:text="LOAD ON"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_BundleQtyCol"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_BundleQty"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottomright_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+
+                    <TextView
+                            android:text="PT NO"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_PTNoCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_PTNo"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottomright_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="Batch No"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_BatchNoCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_BatchNo"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottomright_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="Inspection Count"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_InspectionCountCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_InspectionCount"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottomright_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tableLayout_Header4"
+                    android:layout_weight="1">
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="TOP DEFECT #1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_TopDefectOneCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_TopDefectOne"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="TOP DEFECT #2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_TopDefectTwoCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_TopDefectTwo"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="TOP DEFECT #3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_TopDefectThreeCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_TopDefectThree"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <TextView
+                            android:text="Reject/Good"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_RejectGoodCol"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/holo_orange_light"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textAlignment="textEnd"/>
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_RejectGood"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/rectange_topbottom_corner"
+                            android:textSize="14sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/global_text_color"
+                            android:maxLines="1"
+                            android:ellipsize="none"
+                            android:singleLine="true"/>
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+                android:layout_width="361dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/scrollView_Category"
+                android:visibility="visible"
+                android:background="@drawable/rounded_corner"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_StyleImage"
+                app:layout_constraintVertical_bias="1.0">
+
+            <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gridLayout_Category"
+                    app:columnCount="2"/>
+        </ScrollView>
+
+        <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout_Details"
+                android:id="@+id/scrollView_Types"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout_StyleImage"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:visibility="visible"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout_Button"
+                android:background="@drawable/rounded_corner">
+
+            <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gridLayout_Types"
+                    app:columnCount="9">
+
+            </androidx.gridlayout.widget.GridLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/scrollView_Category"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:id="@+id/constraintLayout_Button"
+                android:visibility="visible"
+                android:background="@drawable/rounded_corner">
+
+            <Button
+                    android:text="EXIT"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button_Exit"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintVertical_bias="0.444"
+                    app:cornerRadius="7dp"
+                    android:scrollHorizontally="false"
+                    android:backgroundTint="@color/global_button_background_color"/>
+
+            <Button
+                    android:text="RESET"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button_Reset"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/button_Exit"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintVertical_bias="0.444"
+                    app:cornerRadius="7dp"
+                    android:backgroundTint="@color/global_button_background_color"/>
+
+            <Button
+                    android:text="NEXT"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button_Next"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintVertical_bias="0.444"
+                    app:cornerRadius="7dp"
+                    android:backgroundTint="@color/global_button_background_color"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="361dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout_Details"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:id="@+id/linearLayout_StyleImage"
+                android:background="@drawable/rounded_corner">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView_StyleImage"
+                    />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="47dp"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    app:srcCompat="@drawable/ic_language_black"
+                    android:id="@+id/floatingButton_Language"
+                    app:backgroundTint="@color/design_default_color_primary"
+                    app:fabSize="auto"
+                    app:borderWidth="20dp"
+                    app:fabCustomSize="46dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/floatingButton_Logout"/>
+
+            <TextView
+                    android:text="Language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_Language"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/floatingButton_Language"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="85dp"
+                    android:layout_marginBottom="46dp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView_Logout"
+                    app:layout_constraintHorizontal_bias="1.0"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="47dp"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    app:srcCompat="@drawable/ic_language_black"
+                    android:id="@+id/floatingButton_Logout"
+                    app:backgroundTint="@color/design_default_color_primary"
+                    app:fabSize="auto"
+                    app:borderWidth="20dp"
+                    app:fabCustomSize="46dp"
+                    android:layout_marginBottom="28dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="32dp"/>
+
+            <TextView
+                    android:text="Log out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_Logout"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toStartOf="@+id/floatingButton_Logout"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    android:layout_marginBottom="40dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

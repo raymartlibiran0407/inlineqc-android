@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EBF8F6</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#CEA3B3</color>
+    <color name="holo_orange_light">#FFBB33</color>
+    <color name="holo_orange_dark">#FF8800</color>
+    <color name="holo_red_light">#FF4444</color>
+    <color name="holo_red_dark">#CC0000</color>
+
+    <!--<color name="global_background_color">#4A4E50</color>-->
+    <color name="global_background_color">#2A2734</color>
+    <color name="global_text_color">#FFFFFF</color>
+    <color name="global_button_background_color">#4D63DC</color>
+</resources>
